@@ -1,0 +1,82 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:attribute="http://schemas.android.com/apk/res-auto"
+    xmlns:autofit="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/menulocation"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <me.grantland.widget.AutofitTextView
+            android:id="@+id/locationTv"
+            android:layout_width="274dp"
+            android:layout_height="31dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="200dp"
+            android:layout_marginEnd="8dp"
+            android:elegantTextHeight="true"
+            android:freezesText="true"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="Wyszukiwanie Twojego adresu..."
+            android:textSize="40sp"
+            attribute:layout_constraintEnd_toEndOf="parent"
+            attribute:layout_constraintStart_toStartOf="parent"
+            attribute:layout_constraintTop_toTopOf="parent"
+            autofit:layout_constraintHorizontal_bias="0.392"
+            autofit:layout_constraintVertical_bias="0.563"
+            autofit:minTextSize="16sp" />
+
+
+        <me.grantland.widget.AutofitTextView
+            android:id="@+id/latLongTv"
+            android:layout_width="239dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="24dp"
+            android:elegantTextHeight="true"
+            android:freezesText="true"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="Wyszukiwanie Twojej lokalizacji..."
+            android:textAlignment="center"
+            android:textSize="40sp"
+            attribute:layout_constraintBottom_toBottomOf="parent"
+            attribute:layout_constraintEnd_toEndOf="parent"
+            attribute:layout_constraintStart_toStartOf="parent"
+            autofit:layout_constraintVertical_bias="0.872"
+            autofit:minTextSize="16sp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/tv_phone_hang_start_call"
+            android:layout_width="208dp"
+            android:layout_height="155dp"
+            android:layout_marginStart="107dp"
+            android:layout_marginTop="200dp"
+            android:layout_marginEnd="107dp"
+            android:layout_marginBottom="100dp"
+            android:drawableTop="@drawable/ic_phone_hang_up"
+            android:drawablePadding="16dp"
+            android:elegantTextHeight="true"
+            android:fontFamily="sans-serif-medium"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:gravity="center"
+            android:padding="8dp"
+            android:textColor="@android:color/black"
+            tools:visibility="visible" />
+    </LinearLayout>
+
+</LinearLayout>

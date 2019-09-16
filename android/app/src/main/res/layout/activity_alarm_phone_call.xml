@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:attribute="http://schemas.android.com/apk/res-auto"
+    xmlns:autofit="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="bottom"
+    android:background="@drawable/alarm_screen"
+    android:orientation="vertical"
+    android:weightSum="2"
+    tools:context=".activity.AlarmPhoneCallActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <com.skyfishjy.library.RippleBackground xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/rippleBackground"
+            android:layout_width="410dp"
+            android:layout_height="197dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="251dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:rb_color="#FFFFFF"
+            app:rb_duration="5000"
+            app:rb_radius="25dp"
+            app:rb_rippleAmount="8"
+            app:rb_scale="3">
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="164dp"
+                android:layout_marginTop="56dp"
+                android:layout_marginEnd="167dp"
+                android:layout_marginBottom="62dp"
+                android:background="@drawable/radiantcross" />
+
+        </com.skyfishjy.library.RippleBackground>
+
+        <me.grantland.widget.AutofitTextView
+            android:id="@+id/latLongAlarmTv"
+            android:layout_width="293dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:elegantTextHeight="true"
+            android:freezesText="true"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="Wyszukiwanie Twojego adresu..."
+            android:textSize="40sp"
+            attribute:layout_constraintBottom_toBottomOf="parent"
+            attribute:layout_constraintEnd_toEndOf="parent"
+            attribute:layout_constraintStart_toStartOf="parent"
+            attribute:layout_constraintTop_toTopOf="parent"
+            autofit:layout_constraintHorizontal_bias="0.392"
+            autofit:layout_constraintVertical_bias="0.563"
+            autofit:minTextSize="16sp" />
+
+
+        <me.grantland.widget.AutofitTextView
+            android:id="@+id/lcAlarmTv"
+            android:layout_width="293dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:elegantTextHeight="true"
+            android:freezesText="true"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="Wyszukiwanie Twojej lokalizacji..."
+            android:textAlignment="center"
+            android:textSize="40sp"
+            attribute:layout_constraintBottom_toBottomOf="parent"
+            attribute:layout_constraintEnd_toEndOf="parent"
+            attribute:layout_constraintStart_toStartOf="parent"
+            attribute:layout_constraintTop_toTopOf="parent"
+            autofit:layout_constraintVertical_bias="0.872"
+            autofit:minTextSize="16sp" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="bottom"
+        android:layout_weight="1"
+        android:gravity="bottom"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="15dp">
+
+        <LinearLayout
+            android:id="@+id/checklist_items_transformation_container_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/checklist_item_1"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_margin="8dp"
+                android:elevation="5dp"
+                android:visibility="invisible"
+                attribute:cardCornerRadius="3dp">
+
+                <FrameLayout
+                    android:layout_width="10dp"
+                    android:layout_height="match_parent"
+                    android:background="#FF0000" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="5dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorPrimaryDark" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="1. Sprecyzuj miejsce zdarzenia."
+                            android:textColor="#212121"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Użyj informacji powyżej. Jeśli jesteś na autostradzie, szukaj znaków dystansowych na drodze!"
+                            android:textColor="#AA212121"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/checklist_items_transformation_container_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/checklist_item_2"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_margin="8dp"
+                android:elevation="5dp"
+                android:visibility="invisible"
+                attribute:cardCornerRadius="3dp">
+
+                <FrameLayout
+                    android:layout_width="10dp"
+                    android:layout_height="match_parent"
+                    android:background="#FF0000" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="5dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorPrimaryDark" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="2. Opisz co się stało."
+                            android:textColor="#212121"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Nie zapomnij o ważnych detalach. Czy widzisz ogień? Czy wycieka olej lub paliwo?"
+                            android:textColor="#AA212121"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/checklist_items_transformation_container_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/checklist_item_3"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_margin="8dp"
+                android:elevation="5dp"
+                android:visibility="invisible"
+                attribute:cardCornerRadius="3dp">
+
+                <FrameLayout
+                    android:layout_width="10dp"
+                    android:layout_height="match_parent"
+                    android:background="#FF0000" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="5dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorPrimaryDark" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="3. Podaj ilość i stan zdrowia poszkodowanych."
+                            android:textColor="#212121"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Dokładnie opisz stan poszkodowanych. Poinformuj operatora jeśli nie jesteś pewny liczby ofiar."
+                            android:textColor="#AA212121"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/checklist_items_transformation_container_4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/checklist_item_4"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_margin="8dp"
+                android:elevation="5dp"
+                android:visibility="invisible"
+                attribute:cardCornerRadius="3dp">
+
+                <FrameLayout
+                    android:layout_width="10dp"
+                    android:layout_height="match_parent"
+                    android:background="#FF0000" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="5dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorPrimaryDark" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="4. Nie rozłączaj się!"
+                            android:textColor="#212121"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Nie wahaj się zadzwonić ponownie, gdy sytuacja się pogorszy."
+                            android:textColor="#AA212121"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
